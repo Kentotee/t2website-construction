@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="video/smile_compressed.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div id="container">
+	<span id="text1"></span>
+	<span id="text2"></span>
+</div>
+
+<div id="bottomnav">
+	<span id="bottom_text"> Designed in Singapore | <a href="https://www.instagram.com">Instagram </a> | <a href="mailto:teetwodesign@gmail.com">Email</a></span>
+</div>
+
+<!-- The SVG filter used to create the merging effect -->
+<svg id="filters">
+	<defs>
+		<filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
+
+</body>
+<link rel="stylesheet" href="style.css">
+<script src="text.js"></script>
+</html>

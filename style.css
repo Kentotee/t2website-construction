@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  max-height: 105%;
+  min-height: 100%;
+  filter: brightness(50%)
+}
+/* Explanation in JS tab */
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+
+#container {
+	/* Center the text in the viewport. */
+	position: absolute;
+	margin: auto;
+	width: 100vw;
+	height: 80px;
+	top: 0;
+	bottom: 0;
+
+	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+	filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+	position: absolute;
+	width: 100%;
+  margin-top:-10vh;
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 11vw;
+  font-weight:bold;
+	text-align: center;
+	user-select: none;
+  color:white;
+}
+
+#bottom_text{
+  position: absolute;
+  bottom:10px;
+  left: 25vw;
+  color: white;
+  font-size:2.8vw;
+}
+
+a {
+  text-decoration:none;
+  color:white;
+}
+
+a:hover {
+  font-size:2.9vw;
+}
